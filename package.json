@@ -1,0 +1,11 @@
+{
+  "name": "moodtunes-workspace",
+  "version": "1.0.0",
+  "description": "Root workspace to launch MoodTunes full-stack app",
+  "scripts": {
+    "backend": "npm --prefix backend start",
+    "frontend": "npm --prefix frontend run dev",
+    "dev": "npx concurrently -k -p \"[{name}]\" -n \"Backend,Frontend\" -c \"magenta,cyan\" \"npm run backend\" \"npm run frontend\"",
+    "start": "npm run dev"
+  }
+}
